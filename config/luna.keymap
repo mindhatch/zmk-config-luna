@@ -1,0 +1,53 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+
+#define luna 0
+#define navi 1
+
+/ {
+    combos {
+        #include "combos.dtsi"
+    };
+    
+    behaviors {
+        skq: sticky_key_quick_release {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_KEY_QUICK_RELEASE";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            quick-release;
+            release-after-ms = <1000>;
+        };
+    };
+
+    keymap {
+        compatible = "zmk,keymap";
+                
+        luna_layer {
+            label = "luna";
+            bindings = <
+                &kp W &kp C &kp Y &kp P &kp K        &kp X &kp J &kp U     &kp O    &kp Q 
+                &kp R &kp S &kp T &kp H &kp B        &kp M &kp N &kp E     &kp A    &kp I
+                      &kp F &kp G &kp D                    &kp L &kp COMMA &kp DOT
+                        &skq LSHFT &sl navi                  &kp SQT &kp SPACE  
+            >;
+        };       
+                 
+        navi_layer {
+            label = "navi";
+            bindings = <
+                &none &none &none &none &none	    &none &none &none &none &none
+                &none &none &none &none &none	    &none &none &none &none &none
+                      &none &none &none 	    	  &none &none &none
+                        &skq LSHFT &sl navi                  &kp SQT &kp SPACE  
+            >;
+        };
+    };
+};
