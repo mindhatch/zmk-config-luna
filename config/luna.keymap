@@ -33,10 +33,10 @@
         luna_layer {
             label = "luna";
             bindings = <
-                &kp W &kp C &kp Y &kp P &kp K        &kp X &kp J &kp U     &kp O    &kp Q 
-                &kp R &kp S &kp T &kp H &kp B        &kp M &kp N &kp E     &kp A    &kp I
-                      &kp F &kp G &kp D                    &kp L &kp COMMA &kp DOT
-                        &skq LSHFT &sl navi                  &kp SQT &kp SPACE  
+                &kp W &kp C &kp Y &kp M &kp X        &kp K &kp P &kp O     &kp U    &kp SQT 
+                &kp R &kp S &kp T &kp N &kp V        &kp B &kp H &kp A     &kp I    &kp E
+                      &kp G &kp F &kp L                    &kp D &kp COMMA &kp DOT
+                        &sl navi &skq LSHFT                 &kp SPACE &kp SQT  
             >;
         };       
                  
@@ -46,7 +46,7 @@
                 &none &none &none &none &none	    &none &none &none &none &none
                 &none &none &none &none &none	    &none &none &none &none &none
                       &none &none &none 	    	  &none &none &none
-                        &skq LSHFT &sl navi                  &kp SQT &kp SPACE  
+                        &trans &trans                    &trans &trans  
             >;
         };
     };

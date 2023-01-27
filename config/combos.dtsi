@@ -8,7 +8,15 @@ compatible = "zmk,combos";
     timeout-ms = <MS>; \
   };
 
-COMBO(z, &kp Z, 2 3, luna, 20)
-COMBO(v, &kp V, 21 22, luna, 20)
-COMBO(fslh, &kp FSLH, 24 25, luna, 20)
+COMBO(z, &kp Z, 1 3, luna, 20)
+COMBO(q, &kp Q, 2 3, luna, 20)
+COMBO(j, &kp J, 1 2, luna, 20)
+COMBO(fslh, &kp FSLH, 23 24, luna, 20)
+COMBO(semi, &kp SEMI, 24 25, luna, 20)
+COMBO(minus, &kp MINUS, 23 25, luna, 20)
+COMBO(ent, &kp ENTER, 20 21, luna, 20)
+COMBO(bspc, &kp BSPC, 21 22, luna, 20)
+COMBO(cbsp, &kp LC(BSPC), 20 22, luna, 20)
+COMBO(tab, &kp TAB, 20 21 22, luna, 20)
+COMBO(esc, &kp ESC, 1 2 3, luna, 20)
 
